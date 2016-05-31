@@ -1,9 +1,12 @@
 import React from 'react';
 
-var App = React.createClass({
+class Main extends React.Component {
 
-    render: function () {
+    constructor(props) {
+        super(props);
+    }
 
+    render() {
         return (
             <div>
                 <header>
@@ -18,6 +21,6 @@ var App = React.createClass({
             </div>
         );
     }
-});
+}
 
-module.exports = App;
+export default Main;
