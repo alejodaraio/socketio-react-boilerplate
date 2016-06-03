@@ -1,1 +1,1 @@
-require('./../../src/client/main');
+require('./../../src/client/index');
