@@ -1,27 +1,32 @@
 {
   "name": "socketio_boilerplate",
   "version": "0.0.1",
-  "main": "server.js",
   "scripts": {
-    "dev-server": "webpack-dev-server --content-base public/ --hot --inline --port 9088",
-    "socketio": "pm2 start app/server/server.js",
-    "start": "npm run socketio && npm run dev-server"
+    "server": "node bin/server/server.js"
   },
   "dependencies": {
     "react": "latest",
     "react-dom": "latest",
-    "react-router": "2.4.0",
-    "socket.io": "1.4.6",
-    "socket.io-client": "latest"
+    "react-redux": "latest",
+    "redux": "latest",
+    "webpack-isomorphic-tools": "2.3.0"
   },
   "devDependencies": {
     "babel-core": "latest",
     "babel-loader": "latest",
+    "babel-plugin-transform-es2015-modules-umd": "6.8.0",
+    "babel-plugin-transform-runtime": "6.9.0",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
     "babel-preset-es2015": "latest",
     "babel-preset-react": "latest",
     "babel-preset-react-hmre": "latest",
-    "css-loader": "0.23.1",
-    "style-loader": "0.13.1",
-    "webpack": "1.13.1"
+    "babel-preset-stage-0": "6.5.0",
+    "babel-register": "latest",
+    "express": "latest",
+    "react-addons-test-utils": "latest",
+    "webpack": "latest",
+    "webpack-dev-middleware": "latest",
+    "webpack-hot-middleware": "latest"
   }
 }

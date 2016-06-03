@@ -4,30 +4,31 @@ var path = require('path');
 module.exports = {
     context: __dirname,
     entry: [
-        "./app/client/index.jsx"
+        "./bin/app/app.js"
     ],
     output: {
-        path: path.resolve(__dirname + "/public/dist"),
+        path: path.join(__dirname, 'dist'),
         filename: "bundle.js",
-        publicPath: "/dist/"
+        publicPath: "/static/"
     },
+    plugins: [
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin()
+    ],
     module: {
         loaders: [
             {
-                test: /\.css$/,
-                loader: "style!css"
-            },
-            {
                 test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/,
                 loader: 'babel',
+                exclude: /(node_modules)/,
+                include: __dirname,
                 query: {
-                    presets: ['react','es2015','react-hmre']
+                    presets: ['react', 'es2015']
                 }
             }
         ]
     },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: false
     }
 };
