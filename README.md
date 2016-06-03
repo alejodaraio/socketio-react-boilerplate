@@ -1,6 +1,6 @@
 # socketio-react-boilerplate
 
-Base with Socket.io and React using es6
+Base with Socket.io and React Redux using es6
 
 ---
 
